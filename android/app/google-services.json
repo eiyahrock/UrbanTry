@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "50754674788",
+    "project_id": "urbanfresh1-5b4fa",
+    "storage_bucket": "urbanfresh1-5b4fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:50754674788:android:48775ea4ae33a253be3f71",
+        "android_client_info": {
+          "package_name": "com.urbantry"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "50754674788-13je421voir90evrhomoivnbllua5n4k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDieuKlod8GqsB2F_6qc4XSNVU2pec1TLE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "50754674788-13je421voir90evrhomoivnbllua5n4k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
