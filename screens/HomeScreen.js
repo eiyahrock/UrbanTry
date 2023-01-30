@@ -89,7 +89,7 @@ const HomeScreen = ({ navigation }) => {
           <Text onPress={() =>
                 navigation.navigate("Cart")
               }style={styles.button2TextStyle}>
-              Go to your Cart!
+              Go to your Cart
             </Text>
           <TouchableOpacity
             style={styles.buttonStyle}
