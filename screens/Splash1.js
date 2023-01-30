@@ -1,6 +1,3 @@
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,500;0,700;0,800;0,900;1,100;1,200&display=swap');
-</style>
 
 import React from 'react';
 import {
@@ -118,14 +115,15 @@ const styles = StyleSheet.create({
       elevation: 5,
     },
     title: {
-      fontFamily: 'Poppins',
+      fontFamily: 'Poppins-Bold',
       fontSize: 32,
       color: '#FFFFFF',
-      fontWeight: 'bold',
+      // fontWeight: 'bold',
       marginBottom: 1,
       textAlign: "center",
     },
     text1:{
+      fontFamily: 'Poppins-Regular',
       color:'#3E3627',
       textAlign: "center",
       fontSize: 15,
@@ -142,6 +140,7 @@ const styles = StyleSheet.create({
       backgroundColor: 'white',
     },
     getStartedButton: {
+      fontFamily: 'Poppins-Regular',
       width: 150,
       fontSize: 16,
       height: 50,
