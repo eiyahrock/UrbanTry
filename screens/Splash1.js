@@ -9,7 +9,6 @@ import {
   Text,
   useColorScheme,
   View,
-  TextInput,
   Image,
 } from 'react-native';
 
