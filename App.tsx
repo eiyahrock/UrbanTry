@@ -26,7 +26,7 @@ import RegScreen from "./screens/RegScreen";
 import RegisterScreenSeller from "./screens/RegisterScreenSeller";
 import Splash1 from "./screens/Splash1";
 import LogReg from "./screens/LogReg";
-import Contact from "./screens/Contact";
+import Cart from "./screens/Cart";
 
 
 const Stack = createStackNavigator();
@@ -126,11 +126,20 @@ const App = () => {
             },
           }}
         />
-        {/* <Stack.Screen
-        name="Contact"
-        component={Contact}
-        options={{ headerShown: false }}
-      /> */}
+        <Stack.Screen
+        name="Cart"
+        component={Cart}
+        options={{
+          title: "Your Cart", //Set Header Title
+          headerStyle: {
+            backgroundColor: "#4CBB17", //Set Header color
+          },
+          headerTintColor: "#fff", //Set Header text color
+          headerTitleStyle: {
+            fontWeight: "bold", //Set Header text style
+          },
+        }}
+      />
         
       </Stack.Navigator>
     </NavigationContainer>

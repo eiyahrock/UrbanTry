@@ -13,7 +13,7 @@ import {
 
 import auth from "@react-native-firebase/auth";
 
-const HomeScreen = ({ navigation }) => {
+const Cart = ({ navigation }) => {
   const [user, setUser] = useState();
 
   useEffect(() => {
@@ -24,36 +24,6 @@ const HomeScreen = ({ navigation }) => {
 
     return subscriber;
   }, []);
-
-  const logout = () => {
-    Alert.alert(
-      "Logout",
-      "Are you sure? You want to logout?",
-      [
-        {
-          text: "Cancel",
-          onPress: () => {
-            return null;
-          },
-        },
-        {
-          text: "Confirm",
-          onPress: () => {
-            auth()
-              .signOut()
-              .then(() => navigation.replace("Auth"))
-              .catch((error) => {
-                console.log(error);
-                if (error.code === "auth/no-current-user")
-                  navigation.replace("Auth");
-                else alert(error);
-              });
-          },
-        },
-      ],
-      { cancelable: false }
-    );
-  };
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -69,11 +39,11 @@ const HomeScreen = ({ navigation }) => {
             style={{
               fontSize: 20,
               textAlign: "center",
-              marginBottom: 16,
+              marginBottom: 100,
               color: "black",
             }}
           >
-            Welcome Urbaners {}
+            CART {}
           </Text>
           {user ? (
             <Text style={{
@@ -82,25 +52,24 @@ const HomeScreen = ({ navigation }) => {
               marginBottom: 16,
               color: "black",
             }}>
-              Good Day {""} 
+              Your Cart is empty{" "} 
               {user.displayName} 
             </Text>
           ) : null}
-          <Text onPress={() =>
-                navigation.navigate("Cart")
-              }style={styles.button2TextStyle}>
-              Go to your Cart!
-            </Text>
-          <TouchableOpacity
+          {/* <TouchableOpacity
             style={styles.buttonStyle}
             activeOpacity={0.5}
             onPress={logout}
           >
             <Text style={styles.buttonTextStyle}>
               Logout
-            </Text>
-            
-          </TouchableOpacity>
+            </Text> */}
+            {/* <Text onPress={() =>
+                navigation.navigate("Contact")
+              }style={styles.button2TextStyle}>
+              Contact Us Here!
+            </Text> */}
+          {/* </TouchableOpacity> */}
         </View>
        
       </View>
@@ -108,7 +77,7 @@ const HomeScreen = ({ navigation }) => {
   );
 };
 
-export default HomeScreen;
+export default Cart;
 
 const styles = StyleSheet.create({
   buttonStyle: {
@@ -122,7 +91,7 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     marginLeft: 35,
     marginRight: 35,
-    marginTop: 100,
+    marginTop: 20,
     marginBottom: 25,
   },
   buttonTextStyle: {
