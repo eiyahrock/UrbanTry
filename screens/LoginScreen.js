@@ -2,6 +2,7 @@
 
 // Import React and Component
 import React, { useState, createRef } from "react";
+
 import {
   SafeAreaView,
   StyleSheet,
@@ -14,6 +15,7 @@ import {
   Image,
   Keyboard,
   TouchableOpacity,
+  Dimensions,
   KeyboardAvoidingView,
 } from "react-native";
 
@@ -147,6 +149,8 @@ export default LoginScreen;
 const styles = StyleSheet.create({
   backgroundimg:{
     flex: 1,
+    height: Dimensions.get('window').height,
+    width: Dimensions.get('window').width
   },
   mainBody: {
     flex: 1,
