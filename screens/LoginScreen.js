@@ -59,7 +59,7 @@ const LoginScreen = ({ navigation }) => {
 
   return (
     <ImageBackground style={styles.backgroundimg} source={require("../Assets/bgwlogo.jpg")}>
-      <StatusBar translucent={true} backgroundColor={'transparent'}/>
+    <StatusBar translucent={true} backgroundColor={'transparent'}/>
     <SafeAreaView style={styles.mainBody}>
       {/* <ScrollView
         keyboardShouldPersistTaps="handled"
@@ -71,16 +71,10 @@ const LoginScreen = ({ navigation }) => {
       > */}
         <View>
           {/* <KeyboardAvoidingView enabled> */}
-            <View style={{ alignItems: "center" }}>
-              {/* <Image
-                source={require("../Assets/logo.png")}
-                style={{
-                  width: "75%",
-                  height: 200,
-                  resizeMode: "contain",
-                  margin: 30,
-                }} */}
-              {/* /> */}
+            <View>
+              <Text style={styles.title}>Log in to lorem ipsum dolor </Text>
+              <Text style={styles.subtitle}>Address Line lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam </Text>
+              
             </View>
             <View style={styles.sectionStyle}>
               <TextInput
@@ -89,7 +83,7 @@ const LoginScreen = ({ navigation }) => {
                   setUserEmail(UserEmail)
                 }
                 placeholder="Please Enter Email" //dummy@abc.com
-                placeholderTextColor="#eee"
+                placeholderTextColor="#939393"
                 autoCapitalize="none"
                 keyboardType="email-address"
                 returnKeyType="next"
@@ -108,7 +102,7 @@ const LoginScreen = ({ navigation }) => {
                   setUserPassword(UserPassword)
                 }
                 placeholder="Please Enter Password" //12345
-                placeholderTextColor="#eee"
+                placeholderTextColor="#939393"
                 keyboardType="default"
                 ref={passwordInputRef}
                 onSubmitEditing={Keyboard.dismiss}
@@ -156,9 +150,25 @@ const styles = StyleSheet.create({
   },
   mainBody: {
     flex: 1,
-    justifyContent: "center",
-    // backgroundColor: "#4CBB17",
+    // justifyContent: "center",
     alignContent: "center",
+  },
+  title: {
+    fontFamily: 'Poppins-Bold',
+    fontSize: 40,
+    marginTop: 70,
+    marginLeft: 35,
+    marginRight: 35,
+    // marginBottom: 50,
+    // margin: 10,
+  },
+  subtitle: {
+    fontFamily: 'Poppins-Light',
+    fontSize: 12,
+    color: '#7DE24E',
+    marginLeft: 35,
+    marginRight: 35,
+    marginBottom: 60,
   },
   sectionStyle: {
     flexDirection: "row",
@@ -182,6 +192,7 @@ const styles = StyleSheet.create({
     marginBottom: 25,
   },
   buttonTextStyle: {
+    fontFamily: 'Poppins-Bold',
     color: "#FFFFFF",
     paddingVertical: 10,
     fontSize: 16,
@@ -191,9 +202,10 @@ const styles = StyleSheet.create({
     color: "black",
     paddingLeft: 15,
     paddingRight: 15,
-    borderWidth: 1,
-    borderRadius: 30,
-    borderColor: "#dadae8",
+    borderWidth: 2,
+    borderRadius: 10,
+    borderColor: "#7DE24E",
+    // borderColor: "#dadae8",
   },
   registerTextStyle: {
     color: "#264CD0",
@@ -202,8 +214,8 @@ const styles = StyleSheet.create({
     fontSize: 14,
     alignSelf: "center",
     // borderWidth: 1,
-    // borderRadius: 30,
-    // borderColor: "green",
+    // borderRadius: 10,
+    // borderColor: "#7DE24E",
     // backgroundColor: "green",
     padding: 5,
   },
