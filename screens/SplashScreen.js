@@ -86,5 +86,6 @@ const styles = StyleSheet.create({
   activityIndicator: {
     alignItems: "center",
     paddingbottom: 50,
+    color: '#21C622',
   },
 });
