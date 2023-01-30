@@ -43,7 +43,8 @@ const Splash1 = ({ navigation }) => {
               <View style={styles.container}>
                 <View style={styles.Box}>
                     
-                  <Text style={styles.title}>Quick delivery at your doorstep!</Text>
+                  <Text style={styles.title}>Quick delivery at 
+                  {""} your doorstep!</Text>
                   <Text style={styles.text1}>Welcome to UrbanFresh! You can find different types of produce and this will be delivered straight to your home.</Text>
                   <Text style={styles.getStartedButton}onPress={() =>
                     navigation.navigate("SplashScreen")
@@ -119,8 +120,9 @@ const styles = StyleSheet.create({
       fontSize: 32,
       color: '#FFFFFF',
       // fontWeight: 'bold',
-      marginBottom: 1,
+      marginTop: 20,
       textAlign: "center",
+      lineHeight: 35,
     },
     text1:{
       fontFamily: 'Poppins-Regular',
