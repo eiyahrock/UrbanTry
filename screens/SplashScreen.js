@@ -85,7 +85,6 @@ const styles = StyleSheet.create({
   },
   activityIndicator: {
     alignItems: "center",
-    // paddingbottom: 50,
-    bottom: 150,
+    paddingbottom: 50,
   },
 });
