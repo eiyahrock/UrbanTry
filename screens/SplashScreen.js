@@ -31,12 +31,12 @@ const SplashScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView
-      style={{ flex: 1, backgroundColor: "#4CBB17" }}
+      style={{ flex: 1, backgroundColor: "#FFFFFF" }}
     >
       
       <View style={styles.container}>
       <Image
-          source={require("../Assets/text-logo-white.png")}
+          source={require("../Assets/text-logo-neon-green.png")}
           style={{
             width: "90%",
             resizeMode: "contain",
@@ -85,6 +85,7 @@ const styles = StyleSheet.create({
   },
   activityIndicator: {
     alignItems: "center",
-    paddingbottom: 50,
+    // paddingbottom: 50,
+    bottom: 150,
   },
 });

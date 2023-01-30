@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
       color:'#3E3627',
       textAlign: "center",
       fontSize: 15,
-      margin: 10,
+      margin: 5,
     },
     input: {
       width: 250,
