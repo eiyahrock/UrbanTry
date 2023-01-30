@@ -8,7 +8,9 @@ import {
   TextInput,
   View,
   Text,
+  StatusBar,
   ScrollView,
+  ImageBackground,
   Image,
   Keyboard,
   TouchableOpacity,
@@ -56,27 +58,29 @@ const LoginScreen = ({ navigation }) => {
   };
 
   return (
+    <ImageBackground style={styles.backgroundimg} source={require("../Assets/bgwlogo.jpg")}>
+      <StatusBar translucent={true} backgroundColor={'transparent'}/>
     <SafeAreaView style={styles.mainBody}>
-      <ScrollView
+      {/* <ScrollView
         keyboardShouldPersistTaps="handled"
         contentContainerStyle={{
           flex: 1,
           justifyContent: "center",
           alignContent: "center",
         }}
-      >
+      > */}
         <View>
-          <KeyboardAvoidingView enabled>
+          {/* <KeyboardAvoidingView enabled> */}
             <View style={{ alignItems: "center" }}>
-              <Image
+              {/* <Image
                 source={require("../Assets/logo.png")}
                 style={{
                   width: "75%",
                   height: 200,
                   resizeMode: "contain",
                   margin: 30,
-                }}
-              />
+                }} */}
+              {/* /> */}
             </View>
             <View style={styles.sectionStyle}>
               <TextInput
@@ -85,7 +89,7 @@ const LoginScreen = ({ navigation }) => {
                   setUserEmail(UserEmail)
                 }
                 placeholder="Please Enter Email" //dummy@abc.com
-                placeholderTextColor="white"
+                placeholderTextColor="#eee"
                 autoCapitalize="none"
                 keyboardType="email-address"
                 returnKeyType="next"
@@ -104,7 +108,7 @@ const LoginScreen = ({ navigation }) => {
                   setUserPassword(UserPassword)
                 }
                 placeholder="Please Enter Password" //12345
-                placeholderTextColor="white"
+                placeholderTextColor="#eee"
                 keyboardType="default"
                 ref={passwordInputRef}
                 onSubmitEditing={Keyboard.dismiss}
@@ -135,22 +139,25 @@ const LoginScreen = ({ navigation }) => {
                 navigation.navigate("RegScreen")
               }
             >
-              No Account? Register Here
+              New user? Create an account here
             </Text>
-          </KeyboardAvoidingView>
+          {/* </KeyboardAvoidingView> */}
         </View>
-      </ScrollView>
-     
+      {/* </ScrollView> */}
     </SafeAreaView>
+    </ImageBackground>
   );
 };
 export default LoginScreen;
 
 const styles = StyleSheet.create({
+  backgroundimg:{
+    flex: 1,
+  },
   mainBody: {
     flex: 1,
     justifyContent: "center",
-    backgroundColor: "#4CBB17",
+    // backgroundColor: "#4CBB17",
     alignContent: "center",
   },
   sectionStyle: {
@@ -189,15 +196,15 @@ const styles = StyleSheet.create({
     borderColor: "#dadae8",
   },
   registerTextStyle: {
-    color: "#FFFFFF",
+    color: "#264CD0",
     textAlign: "center",
     fontWeight: "bold",
     fontSize: 14,
     alignSelf: "center",
-    borderWidth: 1,
-    borderRadius: 30,
-    borderColor: "green",
-    backgroundColor: "green",
+    // borderWidth: 1,
+    // borderRadius: 30,
+    // borderColor: "green",
+    // backgroundColor: "green",
     padding: 5,
   },
   errorTextStyle: {
