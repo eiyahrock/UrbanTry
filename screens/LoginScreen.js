@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
   subtitle: {
     fontFamily: 'Poppins-Light',
     fontSize: 12,
-    color: '#7DE24E',
+    color: '#21C622',
     marginLeft: 35,
     marginRight: 35,
     marginBottom: 60,
@@ -179,10 +179,10 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   buttonStyle: {
-    backgroundColor: "#7DE24E",
+    backgroundColor: "#21C622",
     borderWidth: 0,
     color: "#FFFFFF",
-    borderColor: "#7DE24E",
+    borderColor: "#21C622",
     height: 40,
     alignItems: "center",
     borderRadius: 30,
