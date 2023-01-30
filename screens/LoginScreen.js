@@ -61,7 +61,7 @@ const LoginScreen = ({ navigation }) => {
 
   return (
     <ImageBackground style={styles.backgroundimg} source={require("../Assets/bgwlogo.jpg")}>
-    <StatusBar translucent={true} backgroundColor={'transparent'}/>
+    <StatusBar backgroundColor={'#fff'}/>
     <SafeAreaView style={styles.mainBody}>
       {/* <ScrollView
         keyboardShouldPersistTaps="handled"
@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins-Bold',
     color: '#3E3627',
     fontSize: 40,
-    marginTop: 70,
+    marginTop: 40,
     marginLeft: 35,
     marginRight: 35,
     // marginBottom: 50,
@@ -173,12 +173,12 @@ const styles = StyleSheet.create({
     color: '#21C622',
     marginLeft: 35,
     marginRight: 35,
-    marginBottom: 60,
+    marginBottom: 80,
   },
   sectionStyle: {
     flexDirection: "row",
     height: 40,
-    marginTop: 20,
+    marginTop: 10,
     marginLeft: 35,
     marginRight: 35,
     margin: 10,
