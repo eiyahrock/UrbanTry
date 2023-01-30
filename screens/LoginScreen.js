@@ -62,6 +62,7 @@ const LoginScreen = ({ navigation }) => {
   return (
     <ImageBackground style={styles.backgroundimg} source={require("../Assets/bgwlogo.jpg")}>
     <StatusBar backgroundColor={'#fff'}/>
+    
     <SafeAreaView style={styles.mainBody}>
       {/* <ScrollView
         keyboardShouldPersistTaps="handled"
