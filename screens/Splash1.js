@@ -126,8 +126,8 @@ const styles = StyleSheet.create({
       fontFamily: 'Poppins-Regular',
       color:'#3E3627',
       textAlign: "center",
-      fontSize: 15,
-      margin: 5,
+      fontSize: 13,
+      margin: 10,
     },
     input: {
       width: 250,
