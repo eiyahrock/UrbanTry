@@ -155,6 +155,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: 'Poppins-Bold',
+    color: '#3E3627',
     fontSize: 40,
     marginTop: 70,
     marginLeft: 35,
