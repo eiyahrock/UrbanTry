@@ -90,6 +90,7 @@ const RegisterScreenSeller = ({ navigation }) => {
                   width: "75%",
                   height: 200,
                   resizeMode: "contain",
+                  // marginTop: 40,
                   marginBottom: 10,
                 }}
           />
@@ -102,7 +103,7 @@ const RegisterScreenSeller = ({ navigation }) => {
                 setUsertype(UserType)
               }
               underlineColorAndroid="#f000"
-              placeholder="Are you a Customer, Retailer or Wholesaler"
+              placeholder="Are you a Retailer or Wholesaler"
               placeholderTextColor="white"
               autoCapitalize="sentences"
               returnKeyType="next"
@@ -173,7 +174,7 @@ const RegisterScreenSeller = ({ navigation }) => {
                 setUserLoc(UserLoc)
               }
               underlineColorAndroid="#f000"
-              placeholder="Please Enter Your Address"
+              placeholder="Please Enter Your Store Address"
               placeholderTextColor="white"
               autoCapitalize="sentences"
               returnKeyType="next"
@@ -228,10 +229,10 @@ const styles = StyleSheet.create({
   sectionStyle: {
     flexDirection: "row",
     height: 40,
-    marginTop: 10,
+    marginTop: 15,
     marginLeft: 35,
     marginRight: 35,
-    margin: 10,
+    margin: 5,
   },
   buttonStyle: {
     backgroundColor: "#7DE24E",
@@ -259,7 +260,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 30,
     borderColor: "#dadae8",
-    fontSize: 12,
+    fontSize: 14,
   },
   errorTextStyle: {
     color: "red",

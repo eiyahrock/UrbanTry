@@ -94,6 +94,11 @@ const HomeScreen = ({ navigation }) => {
             <Text style={styles.buttonTextStyle}>
               Logout
             </Text>
+            {/* <Text onPress={() =>
+                navigation.navigate("Contact")
+              }style={styles.button2TextStyle}>
+              Contact Us Here!
+            </Text> */}
           </TouchableOpacity>
         </View>
        
@@ -123,6 +128,21 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     paddingVertical: 10,
     fontSize: 16,
+  },
+  button2TextStyle: {
+    color: "#FFFFFF",
+    paddingVertical: 10,
+    fontSize: 16,
+    backgroundColor: "green",
+    borderWidth: 0,
+    color: "#FFFFFF",
+    borderColor: "#7DE24E",
+    height: 40,
+    borderRadius: 10,
+    marginLeft: 35,
+    marginRight: 35,
+    marginTop: 20,
+    marginBottom: 25,
   },
 
 });

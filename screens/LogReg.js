@@ -17,7 +17,7 @@ import {
 import colors from '../colors.js';
 
 import auth from "@react-native-firebase/auth";
-const RegScreen = ({ navigation }) => {
+const LogReg = ({ navigation }) => {
   
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -25,7 +25,7 @@ const RegScreen = ({ navigation }) => {
     backgroundColor: isDarkMode ? colors.darker : colors.lighter,
   };
     return (
-      <ImageBackground style={styles.backgroundimg} source={require("../Assets/jonas-kakaroto-5JQH9Iqnm9o-unsplash.jpg")}>
+      <ImageBackground style={styles.backgroundimg} source={require("../Assets/bg1.png")}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} backgroundColor={backgroundStyle.backgroundColor}/>
       <SafeAreaView>
         
@@ -40,13 +40,13 @@ const RegScreen = ({ navigation }) => {
                   <Text
               style={styles.SignUpButton}
               onPress={() =>
-                navigation.navigate("RegisterScreen")
+                navigation.navigate("LoginScreen")
               }>
-              Buyer 
+              Login
             </Text>
                   <Text style={styles.LogInButton} onPress={() =>
-                navigation.replace("RegisterScreenSeller")
-              }>Seller</Text>
+                navigation.replace("RegScreen")
+              }>Register</Text>
                 </View>
               </View>
         </ScrollView>
@@ -56,7 +56,7 @@ const RegScreen = ({ navigation }) => {
 }
 
 
-export default RegScreen;
+export default LogReg;
 const styles = StyleSheet.create({
   //Unused styles yet...
   // sectionContainer: {
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     display: 'flex',
-    marginTop: 70,
+    marginTop: 300,
     alignItems: 'center',
     justifyContent: 'center',
   },

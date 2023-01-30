@@ -95,6 +95,7 @@ const RegisterScreen = ({ navigation }) => {
         <KeyboardAvoidingView enabled>
           
           <View style={styles.sectionStyle}>
+      
             <TextInput
               style={styles.inputStyle}
               onChangeText={(UserName) =>
@@ -179,8 +180,17 @@ const RegisterScreen = ({ navigation }) => {
             <Text style={styles.buttonTextStyle}>
               REGISTER
             </Text>
+            
           </TouchableOpacity>
         </KeyboardAvoidingView>
+        {/* <Text
+              style={styles.registerTextStyle}
+              onPress={() =>
+                navigation.navigate("RegisterScreenSeller")
+              }
+            >
+              Are you a Retailer or Wholesaler? Click Here
+            </Text> */}
       </ScrollView>
       {/* <Text
         style={{
@@ -241,6 +251,18 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     borderColor: "#dadae8",
   },
+  // registerTextStyle: {
+  //   color: "#FFFFFF",
+  //   textAlign: "center",
+  //   fontWeight: "bold",
+  //   fontSize: 12,
+  //   alignSelf: "center",
+  //   borderWidth: 1,
+  //   borderRadius: 20,
+  //   borderColor: "green",
+  //   backgroundColor: "green",
+  //   padding: 5,
+  // },
   errorTextStyle: {
     color: "red",
     textAlign: "center",

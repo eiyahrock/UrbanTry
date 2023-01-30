@@ -47,7 +47,7 @@ const Splash1 = ({ navigation }) => {
                 <View style={styles.Box}>
                     
                   <Text style={styles.title}>Quick delivery at your doorstep!</Text>
-                  <Text style={styles.text1}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra sagittis quam odio massa quis sem.</Text>
+                  <Text style={styles.text1}>Welcome to UrbanFresh! You can find different types of produce and this will be delivered straight to your home.</Text>
                   <Text style={styles.getStartedButton}onPress={() =>
                 navigation.navigate("SplashScreen")
               } >Get Started</Text>

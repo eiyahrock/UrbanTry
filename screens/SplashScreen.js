@@ -33,24 +33,26 @@ const SplashScreen = ({ navigation }) => {
     <SafeAreaView
       style={{ flex: 1, backgroundColor: "#4CBB17" }}
     >
+      
       <View style={styles.container}>
-        
-        <ActivityIndicator
-          animating={animating}
-          
-          color="green"
-          size="large"
-          style={styles.activityIndicator}
-        />
-        {/* <Image
-          source={require("../Assets/logo.png")}
+      <Image
+          source={require("../Assets/text-logo-white.png")}
           style={{
             width: "90%",
             resizeMode: "contain",
            
           }}
-        /> */}
+        />
+        
       </View>
+      <ActivityIndicator
+        style={styles.activityIndicator}
+          animating={animating}
+          
+          color="green"
+          size="large"
+          
+        />
       {/* <Text
         style={{
           fontSize: 18,
@@ -83,6 +85,6 @@ const styles = StyleSheet.create({
   },
   activityIndicator: {
     alignItems: "center",
-    height:500,
+    paddingbottom: 50,
   },
 });

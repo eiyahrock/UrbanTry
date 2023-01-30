@@ -25,6 +25,9 @@ import HomeScreen from "./screens/HomeScreen";
 import RegScreen from "./screens/RegScreen";
 import RegisterScreenSeller from "./screens/RegisterScreenSeller";
 import Splash1 from "./screens/Splash1";
+import LogReg from "./screens/LogReg";
+import Contact from "./screens/Contact";
+
 
 const Stack = createStackNavigator();
 
@@ -33,7 +36,12 @@ const Stack = createStackNavigator();
 const Auth = () => {
   // Stack Navigator for Login and Sign up Screen
   return (
-    <Stack.Navigator initialRouteName="LoginScreen">
+    <Stack.Navigator initialRouteName="LogReg">
+      <Stack.Screen
+          name="LogReg"
+          component={LogReg}
+          options={{ headerShown: false }}
+        />
       <Stack.Screen
         name="LoginScreen"
         component={LoginScreen}
@@ -45,23 +53,6 @@ const Auth = () => {
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="RegisterScreenSeller"
-        component={RegisterScreenSeller}
-        options={{
-          title: "Register", //Set Header Title
-          headerStyle: {
-            backgroundColor: "#4CBB17", //Set Header color
-          },
-          headerTintColor: "#fff", //Set Header text color
-          headerTitleStyle: {
-            fontWeight: "bold", //Set Header text style
-          },
-        }
-      }
-      />
-
-  
-        {/* <Stack.Screen
         name="RegisterScreen"
         component={RegisterScreen}
         options={{
@@ -75,13 +66,23 @@ const Auth = () => {
           },
         }
       }
-      /> */}
+      />
    
-      {/* <Stack.Screen
+      <Stack.Screen
         name="RegisterScreenSeller"
         component={RegisterScreenSeller}
-        options={{ headerShown: false }}
-      /> */}
+        options={{
+          title: "Register", //Set Header Title
+          headerStyle: {
+            backgroundColor: "#4CBB17", //Set Header color
+          },
+          headerTintColor: "#fff", //Set Header text color
+          headerTitleStyle: {
+            fontWeight: "bold", //Set Header text style
+          },
+        }
+      }
+      />
     </Stack.Navigator>
   );
 };
@@ -105,6 +106,7 @@ const App = () => {
           options={{ headerShown: false }}
         />
         {/* Auth Navigator which include Login Signup */}
+    
         <Stack.Screen
           name="Auth"
           component={Auth}
@@ -124,6 +126,12 @@ const App = () => {
             },
           }}
         />
+        {/* <Stack.Screen
+        name="Contact"
+        component={Contact}
+        options={{ headerShown: false }}
+      /> */}
+        
       </Stack.Navigator>
     </NavigationContainer>
   );
