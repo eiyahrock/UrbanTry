@@ -12,6 +12,7 @@ import {
 } from "react-native";
 
 import auth from "@react-native-firebase/auth";
+import { ImageBackground } from "react-native/Libraries/Image/Image";
 
 const SplashScreen = ({ navigation }) => {
   //State for ActivityIndicator animation
@@ -43,12 +44,11 @@ const SplashScreen = ({ navigation }) => {
            
           }}
         />
-        
       </View>
       <ActivityIndicator
         style={styles.activityIndicator}
           animating={animating}
-          
+        
           color="green"
           size="large"
           
@@ -85,6 +85,7 @@ const styles = StyleSheet.create({
   },
   activityIndicator: {
     alignItems: "center",
-    paddingbottom: 50,
+    // paddingbottom: 50,
+    bottom: 150,
   },
 });
