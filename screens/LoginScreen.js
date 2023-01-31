@@ -85,7 +85,7 @@ const LoginScreen = ({ navigation }) => {
                 onChangeText={(UserEmail) =>
                   setUserEmail(UserEmail)
                 }
-                placeholder="Please Enter Email" //dummy@abc.com
+                placeholder="E-mail address" //dummy@abc.com
                 placeholderTextColor="#939393"
                 autoCapitalize="none"
                 keyboardType="email-address"
@@ -104,7 +104,7 @@ const LoginScreen = ({ navigation }) => {
                 onChangeText={(UserPassword) =>
                   setUserPassword(UserPassword)
                 }
-                placeholder="Please Enter Password" //12345
+                placeholder="Password" //12345
                 placeholderTextColor="#939393"
                 keyboardType="default"
                 ref={passwordInputRef}

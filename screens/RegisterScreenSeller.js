@@ -7,7 +7,9 @@ import {
   TextInput,
   View,
   Text,
-  Image,
+  Dimensions,
+  ImageBackground,
+  StatusBar,
   KeyboardAvoidingView,
   Keyboard,
   TouchableOpacity,
@@ -73,9 +75,9 @@ const RegisterScreenSeller = ({ navigation }) => {
   };
 
   return (
-    <SafeAreaView
-      style={{ flex: 1, backgroundColor: "#4CBB17" }}
-    >
+    <ImageBackground style={styles.backgroundimg} source={require("../Assets/bgwlogo.jpg")}>
+    <StatusBar translucent={true} backgroundColor={'transparent'}/>
+    <SafeAreaView>
       <ScrollView
         keyboardShouldPersistTaps="handled"
         contentContainerStyle={{
@@ -83,7 +85,10 @@ const RegisterScreenSeller = ({ navigation }) => {
           alignContent: "center",
         }}
       >
-        <View style={{ alignItems: "center" }}>
+        <View>
+              <Text style={styles.title}>Register as Seller </Text>
+        </View>
+        {/* <View style={{ alignItems: "center" }}>
               <Image
                 source={require("../Assets/logo.png")}
                 style={{
@@ -94,7 +99,7 @@ const RegisterScreenSeller = ({ navigation }) => {
                   marginBottom: 10,
                 }}
           />
-        </View>
+        </View> */}
         <KeyboardAvoidingView enabled>
           <View style={styles.sectionStyle}>
             <TextInput
@@ -104,7 +109,7 @@ const RegisterScreenSeller = ({ navigation }) => {
               }
               underlineColorAndroid="#f000"
               placeholder="Are you a Retailer or Wholesaler"
-              placeholderTextColor="white"
+              placeholderTextColor="#939393"
               autoCapitalize="sentences"
               returnKeyType="next"
               onSubmitEditing={() =>
@@ -121,8 +126,8 @@ const RegisterScreenSeller = ({ navigation }) => {
                 setUserName(UserName)
               }
               underlineColorAndroid="#f000"
-              placeholder="Please Enter Name"
-              placeholderTextColor="white"
+              placeholder="Full Name"
+              placeholderTextColor="#939393"
               autoCapitalize="sentences"
               returnKeyType="next"
               onSubmitEditing={() =>
@@ -139,8 +144,8 @@ const RegisterScreenSeller = ({ navigation }) => {
                 setUserEmail(UserEmail)
               }
               underlineColorAndroid="#f000"
-              placeholder="Please Enter Email"
-              placeholderTextColor="white"
+              placeholder="E-mail Address"
+              placeholderTextColor="#939393"
               keyboardType="email-address"
               ref={emailInputRef}
               returnKeyType="next"
@@ -158,8 +163,8 @@ const RegisterScreenSeller = ({ navigation }) => {
                 setUserPassword(UserPassword)
               }
               underlineColorAndroid="#f000"
-              placeholder="Please Enter Password"
-              placeholderTextColor="white"
+              placeholder="Password"
+              placeholderTextColor="#939393"
               ref={passwordInputRef}
               returnKeyType="next"
               secureTextEntry={true}
@@ -174,8 +179,8 @@ const RegisterScreenSeller = ({ navigation }) => {
                 setUserLoc(UserLoc)
               }
               underlineColorAndroid="#f000"
-              placeholder="Please Enter Your Store Address"
-              placeholderTextColor="white"
+              placeholder="Your Store Address"
+              placeholderTextColor="#939393"
               autoCapitalize="sentences"
               returnKeyType="next"
               onSubmitEditing={() =>
@@ -191,6 +196,16 @@ const RegisterScreenSeller = ({ navigation }) => {
               {errortext}{" "}
             </Text>
           ) : null}
+
+          <View style={styles.policy}>
+            <Text style={styles.policyText}>
+              By tapping register, this means that you have agreed to our
+            </Text>
+            <Text style={styles.policyTextSpan}>
+              Terms & Conditions and Privacy Policy.
+            </Text>
+          </View>
+
           <TouchableOpacity
             style={styles.buttonStyle}
             activeOpacity={0.5}
@@ -221,11 +236,17 @@ const RegisterScreenSeller = ({ navigation }) => {
         www.aboutreact.com
       </Text> */}
     </SafeAreaView>
+    </ImageBackground>
   );
 };
 export default RegisterScreenSeller;
 
 const styles = StyleSheet.create({
+  backgroundimg: {
+    flex: 1,
+    height: Dimensions.get('window').height,
+    width: Dimensions.get('window').width
+  },
   sectionStyle: {
     flexDirection: "row",
     height: 40,
@@ -234,8 +255,18 @@ const styles = StyleSheet.create({
     marginRight: 35,
     margin: 5,
   },
+  title: {
+    fontFamily: 'Poppins-Bold',
+    color: '#3E3627',
+    fontSize: 40,
+    marginTop: 30,
+    marginLeft: 35,
+    marginRight: 35,
+    // marginBottom: 10,
+    // margin: 10,
+  },
   buttonStyle: {
-    backgroundColor: "#7DE24E",
+    backgroundColor: "#21C622",
     borderWidth: 0,
     color: "#FFFFFF",
     borderColor: "#7DE24E",
@@ -244,10 +275,11 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     marginLeft: 35,
     marginRight: 35,
-    marginTop: 20,
+    // marginTop: 20,
     marginBottom: 20,
   },
   buttonTextStyle: {
+    fontFamily: 'Poppins-Bold',
     color: "#FFFFFF",
     paddingVertical: 10,
     fontSize: 16,
@@ -257,10 +289,24 @@ const styles = StyleSheet.create({
     color: "black",
     paddingLeft: 15,
     paddingRight: 15,
-    borderWidth: 1,
-    borderRadius: 30,
-    borderColor: "#dadae8",
+    borderWidth: 2,
+    borderRadius: 10,
+    borderColor: "#21C622",
     fontSize: 14,
+  },
+  policy: {
+    alignItems: 'center',
+  },
+  policyText: {
+    fontFamily: 'Popping-Regular',
+    fontSize: 12,
+    marginTop: 10,
+  },
+  policyTextSpan: {
+    fontFamily: 'Popping-Regular',
+    fontSize: 12,
+    color: '#264CD0',
+    marginBottom: 10,
   },
   errorTextStyle: {
     color: "red",

@@ -6,10 +6,14 @@ import {
   View,
   Text,
   SafeAreaView,
+  StatusBar,
   StyleSheet,
   TouchableOpacity,
   Alert,
 } from "react-native";
+
+//import components
+import HeaderTabs from "../components/HeaderTab";
 
 import auth from "@react-native-firebase/auth";
 
@@ -28,7 +32,7 @@ const HomeScreen = ({ navigation }) => {
   const logout = () => {
     Alert.alert(
       "Logout",
-      "Are you sure? You want to logout?",
+      "Are you sure you want to logout?",
       [
         {
           text: "Cancel",
@@ -56,7 +60,13 @@ const HomeScreen = ({ navigation }) => {
   };
 
   return (
+    <>
+    <StatusBar backgroundColor={'#21C622'}/>
     <SafeAreaView style={{ flex: 1 }}>
+      <View style={{backgroundColor: '#21C622', padding: 15}}>
+        <HeaderTabs/>  
+      </View>
+      
       <View style={{ flex: 1, padding: 16 }}>
         <View
           style={{
@@ -97,7 +107,7 @@ const HomeScreen = ({ navigation }) => {
             onPress={logout}
           >
             <Text style={styles.buttonTextStyle}>
-              Logout
+              LOGOUT
             </Text>
             
           </TouchableOpacity>
@@ -105,6 +115,8 @@ const HomeScreen = ({ navigation }) => {
        
       </View>
     </SafeAreaView>
+    </>
+    
   );
 };
 
@@ -113,7 +125,7 @@ export default HomeScreen;
 const styles = StyleSheet.create({
   buttonStyle: {
     minWidth: 300,
-    backgroundColor: "#7DE24E",
+    backgroundColor: "#21C622",
     borderWidth: 0,
     color: "#FFFFFF",
     borderColor: "#7DE24E",
@@ -126,6 +138,7 @@ const styles = StyleSheet.create({
     marginBottom: 25,
   },
   buttonTextStyle: {
+    fontFamily: 'Poppins-Bold',
     color: "#FFFFFF",
     paddingVertical: 10,
     fontSize: 16,

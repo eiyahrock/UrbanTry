@@ -8,6 +8,7 @@ import {
   View,
   Text,
   ScrollView,
+  StatusBar,
   ImageBackground,
   Image,
   Keyboard,
@@ -74,7 +75,7 @@ const RegisterScreen = ({ navigation }) => {
 
   return (
     <ImageBackground style={styles.backgroundimg} source={require("../Assets/bgwlogo.jpg")}>
-
+    <StatusBar translucent={true} backgroundColor={'transparent'}/>
     <SafeAreaView style={styles.mainBody}>
       {/*<ScrollView
         keyboardShouldPersistTaps="handled"
@@ -86,8 +87,7 @@ const RegisterScreen = ({ navigation }) => {
         
         {/*<KeyboardAvoidingView enabled>*/}
         <View>
-              <Text style={styles.title}>Sign in to lorem ipsum dolor </Text>
-              
+              <Text style={styles.title}>Register as Buyer</Text>
         </View>
 
           <View style={styles.sectionStyle}>
@@ -99,7 +99,7 @@ const RegisterScreen = ({ navigation }) => {
               }
               underlineColorAndroid="#f000"
               placeholder="Full Name"
-              placeholderTextColor="white"
+              placeholderTextColor="#939393"
               autoCapitalize="sentences"
               returnKeyType="next"
               onSubmitEditing={() =>
@@ -119,7 +119,7 @@ const RegisterScreen = ({ navigation }) => {
               }
               underlineColorAndroid="#f000"
               placeholder="Email address"
-              placeholderTextColor="white"
+              placeholderTextColor="#939393"
               keyboardType="email-address"
               ref={emailInputRef}
               returnKeyType="next"
@@ -140,7 +140,7 @@ const RegisterScreen = ({ navigation }) => {
               }
               underlineColorAndroid="#f000"
               placeholder="Password"
-              placeholderTextColor="white"
+              placeholderTextColor="#939393"
               ref={passwordInputRef}
               returnKeyType="next"
               secureTextEntry={true}
@@ -158,7 +158,7 @@ const RegisterScreen = ({ navigation }) => {
               }
               underlineColorAndroid="#f000"
               placeholder="Complete Address"
-              placeholderTextColor="white"
+              placeholderTextColor="#939393"
               autoCapitalize="sentences"
               returnKeyType="next"
               onSubmitEditing={() =>
@@ -168,7 +168,14 @@ const RegisterScreen = ({ navigation }) => {
               blurOnSubmit={false}
             />
           </View>
-
+          <View style={styles.policy}>
+            <Text style={styles.policyText}>
+              By tapping register, this means that you have agreed to our
+            </Text>
+            <Text style={styles.policyTextSpan}>
+              Terms & Conditions and Privacy Policy.
+            </Text>
+          </View>
 
           {errortext != "" ? (
             <Text style={styles.errorTextStyle}>
@@ -243,10 +250,10 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins-Bold',
     color: '#3E3627',
     fontSize: 40,
-    marginTop: 10,
+    marginTop: 40,
     marginLeft: 35,
     marginRight: 35,
-    marginBottom: 50,
+    marginBottom: 20,
     // margin: 10,
   },
   subtitle: {
@@ -285,6 +292,19 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderRadius: 10,
     borderColor: "#7DE24E",
+  },
+  policy: {
+    alignItems: 'center',
+  },
+  policyText: {
+    fontFamily: 'Popping-Regular',
+    fontSize: 12,
+  },
+  policyTextSpan: {
+    fontFamily: 'Popping-Regular',
+    fontSize: 12,
+    color: '#264CD0',
+    marginBottom: 10,
   },
   // registerTextStyle: {
   //   color: "#FFFFFF",

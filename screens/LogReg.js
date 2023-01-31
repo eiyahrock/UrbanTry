@@ -42,11 +42,11 @@ const LogReg = ({ navigation }) => {
               onPress={() =>
                 navigation.navigate("LoginScreen")
               }>
-              Login
+              Log in
             </Text>
                   <Text style={styles.LogInButton} onPress={() =>
                 navigation.replace("RegScreen")
-              }>Register</Text>
+              }>Sign up</Text>
                 </View>
               </View>
         </ScrollView>
@@ -124,6 +124,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
  SignUpButton: {
+  fontFamily: 'Poppins-Bold',
     width: 150,
     fontSize: 16,
     height: 50,
@@ -131,7 +132,7 @@ const styles = StyleSheet.create({
     color: '#3E3627',
     textAlign: 'center',
     textAlignVertical: 'center',
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
     borderRadius: 30,
     overflow: 'hidden',
     marginTop: 5,
@@ -142,6 +143,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
 LogInButton: {
+  fontFamily: 'Poppins-Bold',
     width: 150,
     fontSize: 16,
     height: 50,
@@ -149,7 +151,7 @@ LogInButton: {
     color: '#3E3627',
     textAlign: 'center',
     textAlignVertical: 'center',
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
     borderRadius: 30,
     overflow: 'hidden',
     marginTop: 20,
